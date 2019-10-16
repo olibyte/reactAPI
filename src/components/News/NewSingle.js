@@ -1,9 +1,9 @@
 import React from 'react';
 
 const NewSingle = ({item}) => (
-    <li>
-        <p>{item.title}</p>
-    </li>
+    
+        <li>{item.title}</li>
+    
 );
 
 export default NewSingle;
