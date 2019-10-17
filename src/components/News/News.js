@@ -10,7 +10,7 @@ class News extends Component {
     }
 
     componentDidMount() {
-        const url = "https://newsapi.org/v2/everything?q=bitcoin&from=2019-09-16&sortBy=publishedAt&apiKey=a7e8e064a2854146b91a2ff462757841";
+        const url = "https://newsapi.org/v2/everything?q=techcrunch&from=2019-09-17&sortBy=publishedAt&apiKey=a7e8e064a2854146b91a2ff462757841";
     
         fetch(url)
         .then((response) => {
@@ -25,14 +25,14 @@ class News extends Component {
     }
     renderItems() {
         return this.state.news.map((item ) => (
-            <NewSingle key={item.id} item={item} />
+            <NewSingle key={item.url} item={item} />
         ));
     }
     render() {
         return (
-            
-                
-               <ul>{this.renderItems()}</ul>
+            <div className="row">
+                {this.renderItems()}
+            </div>
             
         );
     }
