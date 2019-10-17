@@ -10,8 +10,7 @@ class News extends Component {
     }
 
     componentDidMount() {
-        const url = "https://newsapi.org/v2/everything?q=techcrunch&from=2019-09-17&sortBy=publishedAt&apiKey=a7e8e064a2854146b91a2ff462757841";
-    
+        const url = `https://newsapi.org/v2/${this.props.news.type}?sources=${this.props.news.query}&apiKey=a7e8e064a2854146b91a2ff462757841`;
         fetch(url)
         .then((response) => {
             return response.json();
@@ -24,7 +23,7 @@ class News extends Component {
         .catch((error) => console.log(error));
     }
     renderItems() {
-        return this.state.news.map((item ) => (
+        return this.state.news.map((item) => (
             <NewSingle key={item.url} item={item} />
         ));
     }
