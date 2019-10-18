@@ -14,6 +14,10 @@ class App extends Component {
       news2: {
         type: 'everything',
         query: 'domains=techcrunch.com&language=en'
+      },
+      news3: {
+        type: 'everything',
+        query: 'domains=comicbookmovie.com&language=en'
       }
     };
   }
@@ -24,7 +28,7 @@ class App extends Component {
         <div className="navbar-fixed">
           <nav>
             <div className="nav-wrapper indigo lighten-4">
-              <a href="#" className="bran-logo center">My feed</a>
+              <a href="/" className="bran-logo center">My feed</a>
             </div>
           </nav>
         </div>
@@ -34,7 +38,7 @@ class App extends Component {
             <News news={this.state.news2} />
           </div>
           <div className="col s4">
-            <Sidenews />
+            <Sidenews new={this.state.news3} />
           </div>
         </div>
       </div>
