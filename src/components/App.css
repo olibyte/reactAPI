@@ -20,3 +20,7 @@
 .App-link {
   color: #09d3ac;
 }
+.card-content {
+  min-height: 12vh;
+  display: flex;
+}
