@@ -17,7 +17,7 @@ class App extends Component {
       },
       news3: {
         type: 'everything',
-        query: 'domains=comicbookmovie.com&language=en'
+        query: 'domains=bloomberg.com&language=en'
       }
     };
   }
@@ -38,7 +38,7 @@ class App extends Component {
             <News news={this.state.news2} />
           </div>
           <div className="col s4">
-            <Sidenews new={this.state.news3} />
+            <Sidenews news={this.state.news3} />
           </div>
         </div>
       </div>
